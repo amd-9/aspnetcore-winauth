@@ -25,7 +25,7 @@ namespace WebClientApp.Controllers
             return View();
         }
 
-        [Authorize(NegotiateDefaults.AuthenticationScheme)]
+        [Authorize(AuthenticationSchemes = NegotiateDefaults.AuthenticationScheme)]
         public IActionResult Privacy()
         {
             return View();
