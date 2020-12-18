@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication.Negotiate;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -24,7 +25,7 @@ namespace WebClientApp.Controllers
             return View();
         }
 
-        [Authorize]
+        [Authorize(NegotiateDefaults.AuthenticationScheme)]
         public IActionResult Privacy()
         {
             return View();
